@@ -1,11 +1,8 @@
 import '@testing-library/jest-dom'
 import { types } from '../../types/types';
-import { cloudinary } from '../../config';
-
 
 describe('Pruebas en el objeto types', () => {
 
-    console.log( cloudinary);
     test('debe coincidir el objeto con los parámetros indicados', () => {
         expect(types).toEqual({
             

@@ -14,6 +14,7 @@ export const JournalEntry = ({ note }) => {
     const dispatch = useDispatch();
 
     const handleEntryClick = () => {
+        // console.log('handleEntryClick');
         dispatch(activeNote(id, note));
     };
 

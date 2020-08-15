@@ -35,8 +35,6 @@ export const RegisterScreen = () => {
         }
     };
 
-    
-
     const isFormValid = () => {
 
         if (name.trim().length === 0) {
@@ -61,7 +59,7 @@ export const RegisterScreen = () => {
     return (
         <>
             <h3 className="auth__title">Register</h3>
-            <form 
+            <form
                 onSubmit={handleRegister}
                 className="animate__animated animate__pulse animate__faster"
             >

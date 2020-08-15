@@ -12,6 +12,8 @@ export const useForm = (initialState = {}) => {
       {target} = e
     */
     const formHandleInputChange = ({ target }) => {
+        // console.log(`target.name: "${target.name}""`);
+        // console.log(`target.value: "${target.value}""`);
         setFormValues({
           ...formValues,
           [target.name]: target.value

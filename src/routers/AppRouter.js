@@ -25,20 +25,20 @@ export const AppRouter = () => {
         firebase.auth().onAuthStateChanged es un observable que esta pendiente
         de los cambios que puedan ocurrir en las credenciales del usuario desde 
         firebase, de modo que cuando ocurrá algún cambio se disparará este 
-        evento y dispatch se agregá en el arreglo de dependencias para evitar
+        evento. El dispatch se agregá en el arreglo de dependencias para evitar
         el warning que se marca en la consola del explorador.
     */
 
     useEffect(() => {
         firebase.auth().onAuthStateChanged(async (user) => {
-            // console.log(user);
-            // const {displayName, email, uid} = user;
-            // console.log(displayName);
-            // console.log(email);
+            // console.log(`user: ${user}`);
+            const {displayName, email, uid} = user;
+            // console.log(`displayName: ${displayName}`);
+            // console.log(`email: ${email}`);
 
             if (user?.uid) {
                 const { uid, displayName } = user;
-                // console.log(uid);
+                // console.log(`uid: ${uid}`);
                 dispatch(login(uid, displayName));
                 setIsLogin(true);
                 dispatch(startLoadingNotes(uid));

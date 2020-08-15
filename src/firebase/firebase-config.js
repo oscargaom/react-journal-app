@@ -8,25 +8,25 @@ import config from "../config";
     Register app.
     Add firebase SDK.
 */
- // Your web app's Firebase configuration
- const firebaseConfig = {
-    apiKey: config.fb_api_key,
-    authDomain: config.fb_auth_domain,
-    databaseURL: config.fb_database_url,
-    projectId: config.fb_project_id,
-    storageBucket: config.fb_storage_bucket,
-    messagingSenderId: config.fb_messaging_sender_id,
-    appId: config.fb_app_id
-  };
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: config.FB_API_KEY,
+    authDomain: config.FB_AUTH_DOMAIN,
+    databaseURL: config.FB_DATABASE_URL,
+    projectId: config.FB_PROJECT_ID,
+    storageBucket: config.FB_STORAGE_BUCKET,
+    messagingSenderId: config.FB_MESSAGING_SENDER_ID,
+    appId: config.FB_APP_ID
+};
 
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
-  const db = firebase.firestore();
-  const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+const db = firebase.firestore();
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-  export {
-      db,
-      googleAuthProvider,
-      firebase
-  };
+export {
+    db,
+    googleAuthProvider,
+    firebase
+};

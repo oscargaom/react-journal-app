@@ -23,10 +23,12 @@ export const LoginScreen = () => {
     const handleLogin = (e) => {
         e.preventDefault();
         // dispatch(login('987654', 'Manuel'));
+        // console.log('dispatch startLoginEmailPassword');
         dispatch(startLoginEmailPassword(email, password));
     };
 
     const handleGoogleLogin = () => {
+        // console.log('dispatch startGoogleLogin');
         dispatch(startGoogleLogin());
     };
 

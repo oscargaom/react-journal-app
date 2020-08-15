@@ -48,11 +48,11 @@ export const startLoadingNotes = (uid) => {
 
 export const startSaveNote = (note) => {
     return async (dispatch, getState) => {
-        
+
         const { uid } = getState().auth;
-        
-        console.log('startSaveNote note');
-        console.log(note);
+
+        // console.log('startSaveNote note');
+        // console.log(note);
         const noteToUpdate = { ...note };
         // console.log(noteToUpdate);
         delete noteToUpdate.id;
@@ -67,7 +67,7 @@ export const startSaveNote = (note) => {
         } catch (error) {
             Swal.fire('Cant saved your note', error.toString(), 'error')
         }
-        
+
         // console.log('startSaveNote note.id');
         // console.log(note.id);
         dispatch(refreshNote(note.id, note));
@@ -93,10 +93,10 @@ export const refreshNote = (id, note) => {
 export const startUploading = (file) => {
     return async (dispatch, getState) => {
 
-        const {notes: {active}} = getState();
+        const { notes: { active } } = getState();
 
-        console.log(file);
-        console.log(active);
+        // console.log(file);
+        // console.log(active);
 
         Swal.fire({
             title: 'Uploading ...',
@@ -120,12 +120,12 @@ export const startUploading = (file) => {
 
 export const startDeleting = (id) => {
     return async (dispatch, getState) => {
-        const {auth: {uid}} = getState();
+        const { auth: { uid } } = getState();
 
         // console.log(`startDeleting uid: ${uid}`);
 
         await db.doc(`${uid}/journal/notes/${id}`).delete();
-  
+
         dispatch(deleteNote(id));
     }
 }

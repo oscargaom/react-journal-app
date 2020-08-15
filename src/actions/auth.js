@@ -61,7 +61,7 @@ export const startLoginEmailPassword = (email, password) => {
         dispatch(startLoading());
 
         // setTimeout(() => {
-        firebase.auth().signInWithEmailAndPassword(email, password)
+        return firebase.auth().signInWithEmailAndPassword(email, password)
             .then((userCredential) => {
                 dispatch(finishLoading());
                 const { user: { displayName, uid } } = userCredential;

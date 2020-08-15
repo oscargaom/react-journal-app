@@ -13,10 +13,12 @@ export const Sidebar = () => {
     const { auth: { name } } = stateSelector;
 
     const handleLogout = () => {
+        // console.log('handleLogout');
         dispatch(startLogout());
     };
-
+    
     const handleNewEntry = () => {
+        // console.log('handleNewEntry');
         dispatch(startNewNote());
     };
 

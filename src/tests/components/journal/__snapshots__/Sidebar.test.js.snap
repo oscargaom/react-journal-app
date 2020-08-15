@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el componente <Sidebar /> debe hacer match el snapshot. 1`] = `
+<aside
+  className="journal__sidebar"
+>
+  <div
+    className="journal__sidebar-navbar"
+  >
+    <h3
+      className="mt-5"
+    >
+      <i
+        className="far fa-moon"
+      />
+      <span>
+         
+        oscar
+         
+      </span>
+    </h3>
+    <button
+      className="btn"
+      onClick={[Function]}
+    >
+      Logout
+    </button>
+  </div>
+  <div
+    className="journal__new-entry"
+    onClick={[Function]}
+  >
+    <i
+      className="far fa-calendar-plus fa-5x"
+    />
+    <p
+      className="mt-5"
+    >
+      New entry
+    </p>
+  </div>
+  <div
+    className="journal__entries"
+  >
+    <div
+      className="journal__entry pointer animate__animated animate__backInLeft animate__faster"
+      onClick={[Function]}
+    >
+      <div
+        className="journal__entry-picture"
+        style={
+          Object {
+            "backgroundImage": "url(https://res.cloudinary.com/dhc6rsfox/image/upload/v1597086578/p9npxjothlhhrdtkjasu.jpg)",
+            "backgroundSize": "cover",
+          }
+        }
+      />
+      <div
+        className="journal__entry-body"
+      >
+        <p
+          className="journal__entry-title"
+        >
+          Titulo firebase
+        </p>
+        <p
+          className="journal__entry-content"
+        >
+          trabajando duro!
+        </p>
+      </div>
+      <div
+        className="journal__entry-date-box"
+      >
+        <span>
+          Monday
+        </span>
+        <h4>
+          27th
+        </h4>
+      </div>
+    </div>
+    <div
+      className="journal__entry pointer animate__animated animate__backInLeft animate__faster"
+      onClick={[Function]}
+    >
+      <div
+        className="journal__entry-picture"
+        style={
+          Object {
+            "backgroundImage": "url(https://res.cloudinary.com/dhc6rsfox/image/upload/v1596500035/axoj3ozqkbfxxdch6tn1.jpg)",
+            "backgroundSize": "cover",
+          }
+        }
+      />
+      <div
+        className="journal__entry-body"
+      >
+        <p
+          className="journal__entry-title"
+        >
+          Meditación
+        </p>
+        <p
+          className="journal__entry-content"
+        >
+          30 minutos.
+        </p>
+      </div>
+      <div
+        className="journal__entry-date-box"
+      >
+        <span>
+          Monday
+        </span>
+        <h4>
+          27th
+        </h4>
+      </div>
+    </div>
+  </div>
+</aside>
+`;
